@@ -1,0 +1,79 @@
+{
+  "format": 1,
+  "restore": {
+    "G:\\Users\\Documents\\project\\IdentityServer4Sample\\AuthorizeCodeSample\\MvcCookieAuthSample.csproj": {}
+  },
+  "projects": {
+    "G:\\Users\\Documents\\project\\IdentityServer4Sample\\AuthorizeCodeSample\\MvcCookieAuthSample.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Users\\Documents\\project\\IdentityServer4Sample\\AuthorizeCodeSample\\MvcCookieAuthSample.csproj",
+        "projectName": "MvcCookieAuthSample",
+        "projectPath": "G:\\Users\\Documents\\project\\IdentityServer4Sample\\AuthorizeCodeSample\\MvcCookieAuthSample.csproj",
+        "packagesPath": "C:\\Users\\LIC\\.nuget\\packages\\",
+        "outputPath": "G:\\Users\\Documents\\project\\IdentityServer4Sample\\AuthorizeCodeSample\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LIC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.2, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "identityserver4": {
+              "target": "Package",
+              "version": "[2.3.2, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

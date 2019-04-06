@@ -1,0 +1,14 @@
+G:\Users\Documents\project\IdentityServer4Sample\ResourceOwnerSample\bin\Debug\netcoreapp2.2\ResourceOwnerSample.deps.json
+G:\Users\Documents\project\IdentityServer4Sample\ResourceOwnerSample\bin\Debug\netcoreapp2.2\ResourceOwnerSample.runtimeconfig.json
+G:\Users\Documents\project\IdentityServer4Sample\ResourceOwnerSample\bin\Debug\netcoreapp2.2\ResourceOwnerSample.runtimeconfig.dev.json
+G:\Users\Documents\project\IdentityServer4Sample\ResourceOwnerSample\bin\Debug\netcoreapp2.2\ResourceOwnerSample.dll
+G:\Users\Documents\project\IdentityServer4Sample\ResourceOwnerSample\obj\Debug\netcoreapp2.2\ResourceOwnerSample.csproj.CoreCompileInputs.cache
+G:\Users\Documents\project\IdentityServer4Sample\ResourceOwnerSample\obj\Debug\netcoreapp2.2\ResourceOwnerSample.RazorAssemblyInfo.cache
+G:\Users\Documents\project\IdentityServer4Sample\ResourceOwnerSample\obj\Debug\netcoreapp2.2\ResourceOwnerSample.RazorAssemblyInfo.cs
+G:\Users\Documents\project\IdentityServer4Sample\ResourceOwnerSample\obj\Debug\netcoreapp2.2\ResourceOwnerSample.AssemblyInfoInputs.cache
+G:\Users\Documents\project\IdentityServer4Sample\ResourceOwnerSample\obj\Debug\netcoreapp2.2\ResourceOwnerSample.AssemblyInfo.cs
+G:\Users\Documents\project\IdentityServer4Sample\ResourceOwnerSample\obj\Debug\netcoreapp2.2\ResourceOwnerSample.RazorTargetAssemblyInfo.cache
+G:\Users\Documents\project\IdentityServer4Sample\ResourceOwnerSample\obj\Debug\netcoreapp2.2\ResourceOwnerSample.csprojAssemblyReference.cache
+G:\Users\Documents\project\IdentityServer4Sample\ResourceOwnerSample\bin\Debug\netcoreapp2.2\ResourceOwnerSample.pdb
+G:\Users\Documents\project\IdentityServer4Sample\ResourceOwnerSample\obj\Debug\netcoreapp2.2\ResourceOwnerSample.dll
+G:\Users\Documents\project\IdentityServer4Sample\ResourceOwnerSample\obj\Debug\netcoreapp2.2\ResourceOwnerSample.pdb

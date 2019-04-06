@@ -1,0 +1,11 @@
+G:\Users\Documents\project\IdentityServer4Sample\PwdClientConsole\bin\Debug\netcoreapp2.2\PwdClientConsole.deps.json
+G:\Users\Documents\project\IdentityServer4Sample\PwdClientConsole\bin\Debug\netcoreapp2.2\PwdClientConsole.runtimeconfig.json
+G:\Users\Documents\project\IdentityServer4Sample\PwdClientConsole\bin\Debug\netcoreapp2.2\PwdClientConsole.runtimeconfig.dev.json
+G:\Users\Documents\project\IdentityServer4Sample\PwdClientConsole\bin\Debug\netcoreapp2.2\PwdClientConsole.dll
+G:\Users\Documents\project\IdentityServer4Sample\PwdClientConsole\obj\Debug\netcoreapp2.2\PwdClientConsole.csproj.CoreCompileInputs.cache
+G:\Users\Documents\project\IdentityServer4Sample\PwdClientConsole\obj\Debug\netcoreapp2.2\PwdClientConsole.AssemblyInfoInputs.cache
+G:\Users\Documents\project\IdentityServer4Sample\PwdClientConsole\obj\Debug\netcoreapp2.2\PwdClientConsole.AssemblyInfo.cs
+G:\Users\Documents\project\IdentityServer4Sample\PwdClientConsole\bin\Debug\netcoreapp2.2\PwdClientConsole.pdb
+G:\Users\Documents\project\IdentityServer4Sample\PwdClientConsole\obj\Debug\netcoreapp2.2\PwdClientConsole.csprojAssemblyReference.cache
+G:\Users\Documents\project\IdentityServer4Sample\PwdClientConsole\obj\Debug\netcoreapp2.2\PwdClientConsole.dll
+G:\Users\Documents\project\IdentityServer4Sample\PwdClientConsole\obj\Debug\netcoreapp2.2\PwdClientConsole.pdb

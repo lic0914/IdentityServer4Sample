@@ -1,0 +1,14 @@
+G:\Users\Documents\project\IdentityServer4Sample\Client\bin\Debug\netcoreapp2.2\Client.deps.json
+G:\Users\Documents\project\IdentityServer4Sample\Client\bin\Debug\netcoreapp2.2\Client.runtimeconfig.json
+G:\Users\Documents\project\IdentityServer4Sample\Client\bin\Debug\netcoreapp2.2\Client.runtimeconfig.dev.json
+G:\Users\Documents\project\IdentityServer4Sample\Client\bin\Debug\netcoreapp2.2\Client.dll
+G:\Users\Documents\project\IdentityServer4Sample\Client\bin\Debug\netcoreapp2.2\Client.pdb
+G:\Users\Documents\project\IdentityServer4Sample\Client\obj\Debug\netcoreapp2.2\Client.csprojAssemblyReference.cache
+G:\Users\Documents\project\IdentityServer4Sample\Client\obj\Debug\netcoreapp2.2\Client.csproj.CoreCompileInputs.cache
+G:\Users\Documents\project\IdentityServer4Sample\Client\obj\Debug\netcoreapp2.2\Client.RazorAssemblyInfo.cache
+G:\Users\Documents\project\IdentityServer4Sample\Client\obj\Debug\netcoreapp2.2\Client.RazorAssemblyInfo.cs
+G:\Users\Documents\project\IdentityServer4Sample\Client\obj\Debug\netcoreapp2.2\Client.AssemblyInfoInputs.cache
+G:\Users\Documents\project\IdentityServer4Sample\Client\obj\Debug\netcoreapp2.2\Client.AssemblyInfo.cs
+G:\Users\Documents\project\IdentityServer4Sample\Client\obj\Debug\netcoreapp2.2\Client.RazorTargetAssemblyInfo.cache
+G:\Users\Documents\project\IdentityServer4Sample\Client\obj\Debug\netcoreapp2.2\Client.dll
+G:\Users\Documents\project\IdentityServer4Sample\Client\obj\Debug\netcoreapp2.2\Client.pdb
