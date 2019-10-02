@@ -1,2 +1,5 @@
 # IdentityServer4Sample
-## ClientCerdential ResourceOwnerPassword AuthorizationCode Implicit
+- ClientCerdential 
+- ResourceOwnerPassword 
+- AuthorizationCode 
+- Implicit
