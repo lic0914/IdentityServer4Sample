@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Users\\Documents\\project\\IdentityServer4Sample\\AuthorizeCodeClient\\MvcClient.csproj": {}
+    "F:\\gitrepos\\IdentityServer4Sample\\AuthorizeCodeClient\\MvcClient.csproj": {}
   },
   "projects": {
-    "G:\\Users\\Documents\\project\\IdentityServer4Sample\\AuthorizeCodeClient\\MvcClient.csproj": {
+    "F:\\gitrepos\\IdentityServer4Sample\\AuthorizeCodeClient\\MvcClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Users\\Documents\\project\\IdentityServer4Sample\\AuthorizeCodeClient\\MvcClient.csproj",
+        "projectUniqueName": "F:\\gitrepos\\IdentityServer4Sample\\AuthorizeCodeClient\\MvcClient.csproj",
         "projectName": "MvcClient",
-        "projectPath": "G:\\Users\\Documents\\project\\IdentityServer4Sample\\AuthorizeCodeClient\\MvcClient.csproj",
-        "packagesPath": "C:\\Users\\LIC\\.nuget\\packages\\",
-        "outputPath": "G:\\Users\\Documents\\project\\IdentityServer4Sample\\AuthorizeCodeClient\\obj\\",
+        "projectPath": "F:\\gitrepos\\IdentityServer4Sample\\AuthorizeCodeClient\\MvcClient.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "F:\\gitrepos\\IdentityServer4Sample\\AuthorizeCodeClient\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\LIC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -60,10 +60,16 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

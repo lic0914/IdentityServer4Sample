@@ -1,0 +1,24 @@
+﻿
+@{
+    Layout = null;
+   
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<div>
+    <h1>Home Index View </h1>
+    <ul>
+        @foreach (var c in User.Claims)
+        {
+        <li>type=@c.Type,Value=@c.Value</li>
+        }
+    </ul>
+</div>
+</body>
+</html>
