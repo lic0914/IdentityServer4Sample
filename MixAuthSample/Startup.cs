@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
-namespace ApiClient
+namespace MixAuthSample
 {
     public class Startup
     {
@@ -28,18 +23,23 @@ namespace ApiClient
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllersWithViews();
             services.AddRazorPages();
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, opt =>
-                {
-                    opt.Authority = "http://localhost:5000";
-                    opt.RequireHttpsMetadata = false;
-                    opt.Audience = "api1";
-                });
-            services.AddControllersWithViews()
-                .AddNewtonsoftJson()
-                ;
-            services.AddAuthorization();
+            services.AddOptions<FooAuthenticationOption>("Foo");
+            services.AddOptions<BarAuthenticationOption>("Bar");
+            var builder=services.AddAuthentication(options =>
+            {
+                options.DefaultScheme = "Foo";
+            })
+            .AddScheme<FooAuthenticationOption, FooAuthenticationHandler>("Foo", "foo", options =>
+            {
+                // For example, can foward any requests that start with /api 
+                // to the api scheme.
+                options.ForwardDefaultSelector = ctx =>
+                    ctx.Request.Path.StartsWithSegments("/api") ? "Bar" : null;
+            })
+            .AddScheme<BarAuthenticationOption,BarAuthenticationHandler>("Bar", "bar",options=> { }) ;
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,18 +51,19 @@ namespace ApiClient
             }
             else
             {
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
+                app.UseExceptionHandler("/Home/Error");
             }
+            app.UseStaticFiles();
 
             app.UseRouting();
             app.UseAuthentication();
+            app.UseAuthorization();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
-                endpoints.MapRazorPages();
             });
         }
     }
