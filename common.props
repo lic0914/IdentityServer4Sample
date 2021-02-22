@@ -1,0 +1,7 @@
+<Project> 
+<PropertyGroup>
+
+    <NoWarn>$(NoWarn);1591;1573;1572;1998</NoWarn>
+	  <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+</Project> 

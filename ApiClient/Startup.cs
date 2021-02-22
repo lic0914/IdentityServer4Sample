@@ -26,7 +26,7 @@ namespace ApiClient
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvcCore()
+            services.AddControllers()
                 .AddAuthorization()
                 .AddJsonFormatters();
             services.AddAuthentication("Bearer")
@@ -36,7 +36,7 @@ namespace ApiClient
                     opt.RequireHttpsMetadata = false;
                     opt.Audience = "api1";
                 });
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
