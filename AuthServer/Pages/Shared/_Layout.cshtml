@@ -36,6 +36,13 @@
                         </li>
                     </ul>
                 </div>
+                <div style="float: right;">
+                    @if (Context.User?.Identity?.IsAuthenticated == true)
+                    {
+                        <a class="btn-link" href="/Logout"> Logout</a>
+
+                    }
+                </div>
             </div>
         </nav>
     </header>
