@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace MixAuthSample.Pages.Identity
+namespace MixAuthSample.Pages
 {
-    public class LoginoutModel : PageModel
+    public class IndexModel : PageModel
     {
         public void OnGet()
         {

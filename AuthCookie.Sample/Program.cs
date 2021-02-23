@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Security.Claims;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -55,12 +57,9 @@ namespace AuthCookie.Sample
             if (context?.User?.Identity?.IsAuthenticated == true)
             {
                 var body = $@"<h3>Welcome {context.User.Identity.Name}</h3>";
-                foreach (var userClaim in context.User.Claims)
-                {
-                    body += $"<p>{userClaim.Type}:{userClaim.Value}</p>";
-                }
-                body += "<a href='Account/Logout'>Sign Out</a>";
-                await context.Response.WriteAsync(@"<html><head><title>Index</title></head> <body>" + body + "</body></html>");
+                body += FormatClaimPrincipal(context.User);
+                body += "</br><a href='Account/Logout'>Sign Out</a>";
+                await context.Response.WriteAsync(@"<html><head><meta charset='utf-8'><title>Index</title></head> <body>" + body + "</body></html>");
             }
             else
             {
@@ -83,13 +82,25 @@ namespace AuthCookie.Sample
                 var password = context.Request.Form["password"];
                 if (_accounts.TryGetValue(userName, out var pwd) && pwd == password)
                 {
-                    var identity = new ClaimsIdentity(new List<Claim>()
+                    var identities =new List<ClaimsIdentity>
                     {
-                        new Claim(userName, password),
-                        new Claim("eamil","11@qq.com")
-                    }, "admin");
+                        new ClaimsIdentity(new List<Claim>()
+                        {
+                            new Claim(ClaimTypes.Country, "China"),
+                            new Claim(ClaimTypes.Actor, "owner")
+                        },"owner"),
+                        new ClaimsIdentity(new List<Claim>()
+                        {
+                            new Claim(ClaimTypes.Name, "lic"),
+                            new Claim(ClaimTypes.Email, "11@qq.com"),
+                            new Claim(ClaimTypes.Role, "admin"),
+                            new Claim(ClaimTypes.Role, "sysuser")
+                        },"admin"),
+                    };
+                   
+
                     //var identity = new GenericIdentity(userName, password);
-                    var principal = new ClaimsPrincipal(identity);
+                    var principal = new ClaimsPrincipal(identities);
                     await context.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
                 }
                 else
@@ -122,6 +133,35 @@ namespace AuthCookie.Sample
         {
             await context.SignOutAsync();
             context.Response.Redirect("/");
+        }
+
+        static string FormatClaimPrincipal(ClaimsPrincipal principal)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("<dl>");
+            sb.Append($"<dt>IsAuthenticated：{principal.Identity.IsAuthenticated}</dt>");
+            sb.Append($"<dt>Identity Count ：{principal.Identities.Count()}</dt>");
+            
+            foreach (var identity in principal.Identities)
+            {
+                sb.Append(@$"<dt>Identity Name= {identity.Name} ; Label= {identity.Label} </dt>");
+                foreach (var claim in identity.Claims)
+                {
+                    sb.Append($"<dd>{claim.Type}：{claim.Value}</dd>");
+                }
+                
+            }
+
+            sb.Append("<dt>principal.Claims</dt>");
+            foreach (var principalClaim in principal.Claims)
+            {
+                sb.Append($"<dd>{principalClaim.Type}：{principalClaim.Value}</dd>");
+            }
+
+            sb.Append($"<dt>InRole：{principal.IsInRole("admin")}</dt>");
+            sb.Append($"<dt>OwnerInRole：{principal.IsInRole("owner")}</dt>");
+            sb.Append("</dl>");
+            return sb.ToString();
         }
     }
 

@@ -1,8 +1,42 @@
-﻿@{
+﻿@using System.Security.Claims
+@using System.Text
+@{
+    Layout = null;
     ViewData["Title"] = "Home Page";
+    static string FormatClaimPrincipal(ClaimsPrincipal principal)
+    {
+        StringBuilder sb = new StringBuilder();
+        sb.Append("<dl>");
+        sb.Append($"<dt>IsAuthenticated：{principal.Identity.IsAuthenticated}</dt>");
+        sb.Append($"<dt>Identity Count ：{principal.Identities.Count()}</dt>");
+            
+        foreach (var identity in principal.Identities)
+        {
+            sb.Append(@$"<dt>Identity Name= {identity.Name} ; Label= {identity.Label} </dt>");
+            foreach (var claim in identity.Claims)
+            {
+                sb.Append($"<dd>{claim.Type}：{claim.Value}</dd>");
+            }
+                
+        }
+
+        sb.Append("<dt>principal.Claims</dt>");
+        foreach (var principalClaim in principal.Claims)
+        {
+            sb.Append($"<dd>{principalClaim.Type}：{principalClaim.Value}</dd>");
+        }
+
+        sb.Append($"<dt>InRole：{principal.IsInRole("admin")}</dt>");
+        sb.Append($"<dt>OwnerInRole：{principal.IsInRole("owner")}</dt>");
+        sb.Append("</dl>");
+        return sb.ToString();
+    }
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
+    @Html.Raw(FormatClaimPrincipal(Context.User))
+    
+    <a href="/Identity/Logout">Sign out</a>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
